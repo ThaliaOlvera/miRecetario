@@ -1,0 +1,10 @@
+:root {
+  --blanco: #fff;
+  --negro: #222;
+  --gris: #e2e2e2;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+}
