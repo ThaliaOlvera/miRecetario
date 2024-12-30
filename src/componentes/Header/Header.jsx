@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
 import Logo from "./Logo.png";
+import CabeceraLink from "../HeaderLink/HeaderLink";
 
 function Header() {
   return (
@@ -10,6 +11,10 @@ function Header() {
           <img src={Logo} alt="Logo Mi Recetario" /> <span>Recetario</span>
         </section>
       </Link>
+      <nav>
+        <CabeceraLink url="./">Home</CabeceraLink>
+        <CabeceraLink url="./Favoritos">Favoritos</CabeceraLink>
+      </nav>
     </header>
   );
 }
