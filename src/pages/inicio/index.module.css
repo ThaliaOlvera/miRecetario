@@ -1,4 +1,4 @@
 .container {
   display: flex;
-  background-color: salmon;
+  gap: 1rem;
 }
