@@ -2,6 +2,7 @@ import Titulo from "../../componentes/Titulo";
 import Card from "../../componentes/Card";
 import styles from "./index.module.css";
 import { useEffect, useState } from "react";
+import Categorias from "../../componentes/Categorias";
 
 function Inicio() {
   const [videos, setVideos] = useState([]);
@@ -19,7 +20,7 @@ function Inicio() {
       <Titulo>
         <h1>Un lugar para guardar tus recetas favoritas</h1>
       </Titulo>
-
+      <Categorias />
       <section className={styles.container}>
         {videos.map((video) => {
           return <Card {...video} key={video.id} />;
