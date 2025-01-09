@@ -1,4 +1,3 @@
-import Banner from "../../componentes/Banner";
 import Titulo from "../../componentes/Titulo";
 import Card from "../../componentes/Card";
 import styles from "./index.module.css";
@@ -17,7 +16,6 @@ function Inicio() {
 
   return (
     <>
-      <Banner img="home" color="#154580" />
       <Titulo>
         <h1>Un lugar para guardar tus recetas favoritas</h1>
       </Titulo>

@@ -14,6 +14,7 @@ function Header() {
       <nav>
         <CabeceraLink url="./">Home</CabeceraLink>
         <CabeceraLink url="./Favoritos">Favoritos</CabeceraLink>
+        <CabeceraLink url="./NuevoVideo">Nuevo Video</CabeceraLink>
       </nav>
     </header>
   );

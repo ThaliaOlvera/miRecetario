@@ -3,11 +3,13 @@ import Container from "../../componentes/Container";
 import Header from "../../componentes/Header/Header";
 import FavoritosProvider from "../../context/Favoritos";
 import Footer from "../../componentes/Footer";
+import Banner from "../../componentes/Banner";
 
 function PaginaBase() {
   return (
     <main>
       <Header />
+      <Banner img="home" color="#154580" />
       <FavoritosProvider>
         <Container>
           <Outlet />

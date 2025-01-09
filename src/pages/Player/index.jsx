@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import Banner from "../../componentes/Banner";
 import Titulo from "../../componentes/Titulo";
 import styles from "./Player.module.css";
-import videos from "../../data/db.json";
 import NotFound from "../NotFound";
 import { useEffect, useState } from "react";
 
