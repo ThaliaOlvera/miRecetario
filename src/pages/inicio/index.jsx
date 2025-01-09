@@ -2,9 +2,19 @@ import Banner from "../../componentes/Banner";
 import Titulo from "../../componentes/Titulo";
 import Card from "../../componentes/Card";
 import styles from "./index.module.css";
-import videos from "../../data/db.json";
+import { useEffect, useState } from "react";
 
 function Inicio() {
+  const [videos, setVideos] = useState([]);
+
+  useEffect(() => {
+    fetch("https://my-json-server.typicode.com/ThaliaOlvera/recetarioDb/videos")
+      .then((response) => response.json())
+      .then((data) => {
+        setVideos(data);
+      });
+  }, []);
+
   return (
     <>
       <Banner img="home" color="#154580" />

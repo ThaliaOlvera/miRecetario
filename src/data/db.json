@@ -1,26 +1,27 @@
-[
+{"videos":[ 
     {
         "id": 1,
         "titulo": "Bowl de Salmon",
         "capa": "https://i.ytimg.com/vi/JkxyJ962es4/oar2.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLDAIEE26G96cPylebXTSg35UsguBw",
-        "link": "https://www.youtube.com/watch?v=6NIzfNGyuzs"
+        "link": "https://www.youtube.com/embed/CgW1Wz9i3IE?si=uwGQ_aWKjf54jrW8"
     },
     {
         "id": 2,
         "titulo": "Camarones Teriyaki",
         "capa": "https://i.ytimg.com/vi/NqYjkc8k-WY/oardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLCmImH-XoyIENCh2t7O8DVDBn7DnA",
-        "link": "https://www.youtube.com/shorts/NqYjkc8k-WY"
+        "link": "https://www.youtube.com/embed/YluNZUblHp4?si=kqqfHOzNh1FGj-L5"
     },
     {
         "id": 3,
         "titulo": "Croquetas de atun",
         "capa": "https://i.ytimg.com/vi/qrQtsN7kE0U/oardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLAb3D6F1btimrLEIlMGUTVnj3xblQ",
-        "link": "https://www.youtube.com/shorts/qrQtsN7kE0U"
+        "link": "https://www.youtube.com/embed/vyj9hebVatU?si=RsmcN-5G07JZ7Dnr"
     },
     {
         "id": 4,
-        "titulo": "Postre de 3 ingredientes",
+        "titulo": "Postre de 4 ingredientes",
         "capa": "https://i.ytimg.com/vi/FB_p1ULnjBk/oardefault.jpg?sqp=-oaymwEoCJUDENAFSFqQAgHyq4qpAxcIARUAAIhC2AEB4gEKCBgQAhgGOAFAAQ==&rs=AOn4CLCsudkk0TVxdvmUOZHKgYyiHi92Og",
-        "link": "https://www.youtube.com/shorts/FB_p1ULnjBk"
+        "link": "https://www.youtube.com/embed/GUnW4_7xfEQ?si=uKWtTID-Q1DdkBwG"
     }
 ]
+ }
