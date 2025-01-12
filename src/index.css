@@ -1,9 +1,13 @@
 :root {
   --blanco: #fff;
-  --negro: #222;
+  --negro: #0b0b0d;
   --gris: #e2e2e2;
   --verde: #a3df8e;
+  --verdeObscuro: #6bb39b;
   --beige: #f7f4e8;
+  --small: 16px;
+  --medium: 24px;
+  --large: 32px;
 }
 
 body {

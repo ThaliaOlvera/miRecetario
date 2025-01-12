@@ -1,25 +1,56 @@
 .container {
-  padding: 0 0 1em 0;
-  margin-top: 1.5em;
   width: 282px;
-  background-size: cover;
-  background-color: var(--negro);
+  margin: 2rem 0rem 2rem 0rem;
+  background-color: var(--verdeObscuro);
   border-radius: 10px;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.75);
 }
 
 .capa {
-  width: 90%;
-  border-radius: 10px;
+  width: 80%;
+  height: 70%;
   padding-top: 1rem;
 }
 
 .link {
-  color: var(--beige);
+  color: var(--negro);
+}
+
+.link h2:hover {
+  color: var(--negro);
+  transform: scale(1.05);
+  transition: 0.3s ease-in-out;
 }
 
 .favorite {
   width: 30px;
   height: 30px;
+  cursor: pointer;
+}
 
-  padding: 0 0 0 0.5rem;
+.favorite:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.containerBtn {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.containerBtn button {
+  width: 30%;
+  font-size: var(--small);
+  font-weight: 400;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--beige);
+}
+
+.containerBtn button:hover {
+  transform: scale(1.07);
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
 }

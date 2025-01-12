@@ -14,12 +14,16 @@ function Card({ id, capa, titulo }) {
         <img src={capa} alt={titulo} className={styles.capa} />
         <h2>{titulo} </h2>
       </Link>
-      <img
-        src={icon}
-        alt="Icono Favorito"
-        className={styles.favorite}
-        onClick={() => agregarFavorito({ id, titulo, capa })}
-      />
+      <div className={styles.containerBtn}>
+        <img
+          src={icon}
+          alt="Icono Favorito"
+          className={styles.favorite}
+          onClick={() => agregarFavorito({ id, titulo, capa })}
+        />
+        <button type="button">Editar</button>
+        <button type="button">Guardar</button>
+      </div>
     </div>
   );
 }

@@ -30,7 +30,7 @@ function Categorias() {
     <section className={styles.container}>
       {Object.entries(videosPorCategoria).map(([categoria, videos]) => (
         <div key={categoria} className={styles.infoCategoria}>
-          <h2>{categoria}</h2>
+          <h2 className={styles.infoCategoriaTitulo}>{categoria}</h2>
           <div className={styles.inforCard}>
             {videos.map((video) => (
               <Card key={video.id} {...video} />
