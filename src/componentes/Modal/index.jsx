@@ -1,11 +1,13 @@
 import styles from "./Modal.module.css";
 
-function Modal() {
+function Modal({ cerrarModal }) {
   return (
     <div className={styles.efectoModal}>
       <div className={styles.modalContenedor}>
         <h2>Editar Card</h2>
-        <button className={styles.cerrarBtn}>X</button>
+        <button className={styles.cerrarBtn} onClick={cerrarModal}>
+          X
+        </button>
       </div>
       <form className={styles.modalForm}>
         <label htmlFor="titulo">Titulo:</label>

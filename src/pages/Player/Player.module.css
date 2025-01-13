@@ -1,7 +1,9 @@
 iframe {
-  height: 80vh;
+  height: 70vh;
 }
 .container {
+  width: 100%;
+  background-color: var(--verdeObscuro);
   display: flex;
   gap: 1rem;
   justify-content: space-around;

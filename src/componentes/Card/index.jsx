@@ -3,11 +3,24 @@ import styles from "./Card.module.css";
 import iconHeathFill from "./iconHeathFill.png";
 import iconHeathEmpty from "./iconHeathEmpty.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../Modal";
 
 function Card({ id, capa, titulo }) {
   const { favorito, agregarFavorito } = useFavoritosContext();
+  const [modalAbierto, setModalAbierto] = useState(false);
+
   const isFavorito = favorito.some((fav) => fav.id === id);
   const icon = isFavorito ? iconHeathFill : iconHeathEmpty;
+
+  const abrirModal = () => {
+    setModalAbierto(true);
+  };
+
+  const cerrarModal = () => {
+    setModalAbierto(false);
+  };
+
   return (
     <div className={styles.container}>
       <Link className={styles.link} to={`/${id}`}>
@@ -21,9 +34,13 @@ function Card({ id, capa, titulo }) {
           className={styles.favorite}
           onClick={() => agregarFavorito({ id, titulo, capa })}
         />
-        <button type="button">Editar</button>
-        <button type="button">Guardar</button>
+        <button type="button" onClick={abrirModal}>
+          Editar
+        </button>
+        <button type="button">Borrar</button>
       </div>
+
+      {modalAbierto && <Modal cerrarModal={cerrarModal} />}
     </div>
   );
 }
