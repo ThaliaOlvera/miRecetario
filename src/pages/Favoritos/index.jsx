@@ -1,4 +1,3 @@
-import Banner from "../../componentes/Banner";
 import Titulo from "../../componentes/Titulo";
 import styles from "./Favoritos.module.css";
 import { useFavoritosContext } from "../../context/Favoritos";

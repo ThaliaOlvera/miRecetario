@@ -8,17 +8,19 @@ import Modal from "../Modal";
 
 function Card({ id, capa, titulo }) {
   const { favorito, agregarFavorito } = useFavoritosContext();
-  const [modalAbierto, setModalAbierto] = useState(false);
+  const [modalAbierto, setModalAbierto] = useState({ visible: false });
 
   const isFavorito = favorito.some((fav) => fav.id === id);
   const icon = isFavorito ? iconHeathFill : iconHeathEmpty;
 
   const abrirModal = () => {
-    setModalAbierto(true);
+    const nuevoEstado = { ...modalAbierto, visible: true };
+    setModalAbierto(nuevoEstado);
   };
 
   const cerrarModal = () => {
-    setModalAbierto(false);
+    const nuevoEstado = { ...modalAbierto, visible: false };
+    setModalAbierto(nuevoEstado);
   };
 
   return (
@@ -40,7 +42,7 @@ function Card({ id, capa, titulo }) {
         <button type="button">Borrar</button>
       </div>
 
-      {modalAbierto && <Modal cerrarModal={cerrarModal} />}
+      {modalAbierto.visible && <Modal cerrarModal={cerrarModal} />}
     </div>
   );
 }
