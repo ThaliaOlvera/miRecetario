@@ -1,0 +1,89 @@
+.efectoModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContenedor {
+  background-color: var(--verdeObscuro);
+  padding: 4px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+/* Botón de cerrar */
+.cerrarBtn {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  width: 5px;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  background-color: var(--beige);
+  font-size: var(--medium);
+  cursor: pointer;
+  color: var(--negro);
+}
+
+.modalForm {
+  width: 37%;
+  height: 70dvh;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: beige;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+label {
+  color: var(--negro);
+  font-size: var(--small);
+}
+
+.modalBotones {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: var(--small);
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.guardar {
+  background-color: var(--verdeObscuro);
+  color: var(--blanco);
+}
+
+.guardar:hover {
+  background-color: var(--gris);
+}
+
+.limpiar {
+  background-color: var(--verdeObscuro);
+  color: var(--blanco);
+}
+
+.limpiar:hover {
+  background-color: var(--gris);
+}

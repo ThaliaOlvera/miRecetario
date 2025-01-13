@@ -19,8 +19,14 @@ h1 {
 
 p {
   color: var(--negro);
-  font-size: var(--medium);
+  font-size: var(--small);
   margin-bottom: 1rem;
+}
+
+.containerSubtitulo {
+  padding-bottom: 0.5rem;
+  text-align: start;
+  border-bottom: var(--negro) solid 2px;
 }
 
 .modalForm {

@@ -4,7 +4,7 @@ function Modal({ cerrarModal }) {
   return (
     <div className={styles.efectoModal}>
       <div className={styles.modalContenedor}>
-        <h2>Editar Card</h2>
+        <h2 className={styles.modalTitulo}>Editar</h2>
         <button className={styles.cerrarBtn} onClick={cerrarModal}>
           X
         </button>
@@ -40,13 +40,6 @@ function Modal({ cerrarModal }) {
           name="video"
           placeholder="URL del video"
         />
-
-        <label htmlFor="descripcion">Descripción:</label>
-        <textarea
-          id="descripcion"
-          name="descripcion"
-          placeholder="Añade una descripción"
-        ></textarea>
 
         <div className={styles.modalBotones}>
           <button type="submit" className={styles.guardar}>

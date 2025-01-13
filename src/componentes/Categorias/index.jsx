@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./Categorias.module.css";
 import Card from "../Card";
 
-function Categorias() {
+function Categorias({ nuevoVideo }) {
   const [videosPorCategoria, setVideosPorCategoria] = useState([]);
   useEffect(() => {
     const fetchVideos = async () => {
@@ -25,6 +25,21 @@ function Categorias() {
 
     fetchVideos();
   }, []);
+
+  useEffect(() => {
+    if (nuevoVideo) {
+      setVideosPorCategoria((prev) => {
+        const updated = { ...prev };
+        const categoria = nuevoVideo.categoria;
+
+        if (!updated[categoria]) {
+          updated[categoria] = [];
+        }
+        updated[categoria].push(nuevoVideo);
+        return updated;
+      });
+    }
+  }, [nuevoVideo]);
 
   return (
     <section className={styles.container}>
