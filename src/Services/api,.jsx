@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://my-json-server.typicode.com/ThaliaOlvera/recetarioDb/",
+  baseURL: "https://678d9465f067bf9e24ea9a5a.mockapi.io/",
 });
 
 export const getVideos = async () => {
