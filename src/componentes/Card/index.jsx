@@ -47,7 +47,9 @@ const Card = ({ video }) => {
         </button>
       </div>
 
-      {modalAbierto.visible && <Modal cerrarModal={cerrarModal} />}
+      {modalAbierto.visible && (
+        <Modal video={video} cerrarModal={cerrarModal} />
+      )}
     </div>
   );
 };
