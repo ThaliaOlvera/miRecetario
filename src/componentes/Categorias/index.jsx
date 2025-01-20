@@ -1,28 +1,25 @@
 import styles from "./Categorias.module.css";
 import Card from "../Card";
+import { useVideoContext } from "../../context/VideosContext";
 
-function Categorias({ videos }) {
-  // Agrupar los videos por categoría
-  const videosPorCategoria = videos.reduce((acc, video) => {
-    acc[video.categoria] = acc[video.categoria] || [];
-    acc[video.categoria].push(video);
-    return acc;
-  }, {});
+const CategoryVideos = () => {
+  const { videoCategory } = useVideoContext();
+  console.log("Categorías de videos:", videoCategory);
 
   return (
     <section className={styles.container}>
-      {Object.entries(videosPorCategoria).map(([categoria, videos]) => (
-        <div key={categoria} className={styles.infoCategoria}>
-          <h2 className={styles.infoCategoriaTitulo}>{categoria}</h2>
+      {Object.keys(videoCategory).map((category) => (
+        <div key={category} className={styles.infoCategoria}>
+          <h2 className={styles.infoCategoriaTitulo}>{category}</h2>
           <div className={styles.inforCard}>
-            {videos.map((video) => (
-              <Card key={video.id} {...video} />
+            {videoCategory[category].map((video) => (
+              <Card key={video.id} video={video} />
             ))}
           </div>
         </div>
       ))}
     </section>
   );
-}
+};
 
-export default Categorias;
+export default CategoryVideos;

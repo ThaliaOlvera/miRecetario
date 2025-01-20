@@ -5,12 +5,14 @@ import iconHeathEmpty from "./iconHeathEmpty.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Modal from "../Modal";
+import { useVideoContext } from "../../context/VideosContext";
 
-function Card({ id, capa, titulo }) {
+const Card = ({ video }) => {
+  const { deleteVideo } = useVideoContext();
   const { favorito, agregarFavorito } = useFavoritosContext();
   const [modalAbierto, setModalAbierto] = useState({ visible: false });
 
-  const isFavorito = favorito.some((fav) => fav.id === id);
+  const isFavorito = favorito.some((fav) => fav.id === video.id);
   const icon = isFavorito ? iconHeathFill : iconHeathEmpty;
 
   const abrirModal = () => {
@@ -25,26 +27,29 @@ function Card({ id, capa, titulo }) {
 
   return (
     <div className={styles.container}>
-      <Link className={styles.link} to={`/${id}`}>
-        <img src={capa} alt={titulo} className={styles.capa} />
-        <h2>{titulo} </h2>
+      <Link className={styles.link} to={`${video.id}`}>
+        <img src={video.capa} alt={video.titulo} className={styles.capa} />
+        <h2>{video.titulo} </h2>
       </Link>
+
       <div className={styles.containerBtn}>
         <img
           src={icon}
           alt="Icono Favorito"
           className={styles.favorite}
-          onClick={() => agregarFavorito({ id, titulo, capa })}
+          onClick={() => agregarFavorito(video)}
         />
         <button type="button" onClick={abrirModal}>
           Editar
         </button>
-        <button type="button">Borrar</button>
+        <button type="button" onClick={() => deleteVideo(video.id)}>
+          Borrar
+        </button>
       </div>
 
       {modalAbierto.visible && <Modal cerrarModal={cerrarModal} />}
     </div>
   );
-}
+};
 
 export default Card;
