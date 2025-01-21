@@ -2,30 +2,7 @@ import { useState } from "react";
 import styles from "./Modal.module.css";
 import { useVideoContext } from "../../context/VideosContext";
 
-function Modal({ cerrarModal, video }) {
-  const { updateVideo } = useVideoContext(); // Usa la función del contexto
-  const [formData, setFormData] = useState({
-    titulo: video.titulo,
-    categoria: video.categoria,
-    capa: video.capa,
-    link: video.link,
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await updateVideo(video.id, formData); // Llama a la función updateVideo del contexto
-      cerrarModal(); // Cierra el modal
-    } catch (error) {
-      console.error("Error al actualizar el video:", error);
-    }
-  };
-
+function Modal({ cerrarModal }) {
   return (
     <div className={styles.efectoModal}>
       <div className={styles.modalContenedor}>
@@ -81,11 +58,7 @@ function Modal({ cerrarModal, video }) {
           <button type="submit" className={styles.guardar}>
             Guardar
           </button>
-          <button
-            type="button"
-            className={styles.limpiar}
-            onClick={() => setFormData(video)} // Restaura los valores originales
-          >
+          <button type="reset" className={styles.limpiar}>
             Limpiar
           </button>
         </div>
