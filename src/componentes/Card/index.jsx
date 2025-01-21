@@ -12,6 +12,11 @@ const Card = ({ video }) => {
   const { favorito, agregarFavorito } = useFavoritosContext();
   const [modalAbierto, setModalAbierto] = useState({ visible: false });
 
+  if (!video || !video.id) {
+    console.error("El objeto video no es válido:", video);
+    return null;
+  }
+
   const isFavorito = favorito.some((fav) => fav.id === video.id);
   const icon = isFavorito ? iconHeathFill : iconHeathEmpty;
 
@@ -47,7 +52,9 @@ const Card = ({ video }) => {
         </button>
       </div>
 
-      {modalAbierto.visible && <Modal cerrarModal={cerrarModal} />}
+      {modalAbierto.visible && (
+        <Modal video={video} cerrarModal={cerrarModal} />
+      )}
     </div>
   );
 };

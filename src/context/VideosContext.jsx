@@ -23,7 +23,6 @@ export const VideoProvider = ({ children }) => {
         setVideos(videoData);
         setLoading(false);
       } catch (error) {
-        console.error("Error ao buscar videos", error);
         setLoading(false);
       }
     };
@@ -35,7 +34,6 @@ export const VideoProvider = ({ children }) => {
       const newVideo = await addVideoService(video);
       setVideos((prevVideos) => {
         const updatedVideos = [...prevVideos, newVideo];
-        console.log("Videos actualizados:", updatedVideos);
         return updatedVideos;
       });
     } catch (error) {
@@ -50,20 +48,25 @@ export const VideoProvider = ({ children }) => {
         prevVideos.filter((video) => video.id !== videoId)
       );
     } catch (error) {
-      console.error("Error a borrar video", error);
+      console.error("Error al borrar video", error);
     }
   };
 
   const updateVideo = async (videoId, updatedVideo) => {
     try {
       const updatedData = await updateVideoService(videoId, updatedVideo);
-      setVideos((prevVideos) =>
-        prevVideos.map((video) =>
+
+      setVideos((prevVideos) => {
+        const updatedVideos = prevVideos.map((video) =>
           video.id === videoId ? { ...video, ...updatedData } : video
-        )
-      );
+        );
+        return updatedVideos;
+      });
     } catch (error) {
-      console.error("Error al actualizar video", error);
+      console.error(
+        "Error al actualizar el video:",
+        error.response?.data || error.message
+      );
     }
   };
 

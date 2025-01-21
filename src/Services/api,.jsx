@@ -35,6 +35,7 @@ export const deleteVideo = async (videoId) => {
 };
 
 export const updateVideo = async (videoId, updatedVideo) => {
+  console.log("Actualizando video con ID:", videoId, updatedVideo);
   try {
     const response = await api.put(`/videos/${videoId}`, updatedVideo);
     return response.data;
