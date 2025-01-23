@@ -4,6 +4,7 @@ import path from "path"; // Importar el módulo path
 
 export default defineConfig({
   plugins: [react()],
+  base: "/miRecetario/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"), // Alias para la carpeta 'src'
