@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useVideoContext } from "../../context/VideosContext";
 import styles from "./NuevoVideo.module.css";
+import { useNavigate } from "react-router-dom";
 
 const NuevoVideo = () => {
+  const navigate = useNavigate();
   const { addVideo } = useVideoContext();
   const [formData, setFormData] = useState({
     titulo: "",
@@ -50,6 +52,8 @@ const NuevoVideo = () => {
       capa: "",
       link: "",
     });
+
+    navigate("/");
   };
 
   const handleReset = () => {

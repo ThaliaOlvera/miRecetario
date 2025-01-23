@@ -9,7 +9,7 @@ function PaginaBase() {
   return (
     <main>
       <Header />
-      <Banner img="home" color="#154580" />
+      <Banner />
       <FavoritosProvider>
         <Container>
           <Outlet />
