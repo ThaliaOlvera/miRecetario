@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "/miRecetario/index.css";
+import "/index.css";
 
 import AppRoutes from "./routes";
 import { VideoProvider } from "./context/VideosContext";
