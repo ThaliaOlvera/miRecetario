@@ -2,7 +2,29 @@ import { useState } from "react";
 import styles from "./Modal.module.css";
 import { useVideoContext } from "../../context/VideosContext";
 
-function Modal({ cerrarModal }) {
+function Modal({ cerrarModal, video }) {
+  const { updateVideo } = useVideoContext();
+  const [formData, setFormData] = useState({
+    titulo: video.titulo,
+    categoria: video.categoria,
+    capa: video.capa,
+    link: video.link,
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await updateVideo(video.id, formData);
+      cerrarModal();
+    } catch (error) {
+      console.error("Error al actualizar el video:", error);
+    }
+  };
+
   return (
     <div className={styles.efectoModal}>
       <div className={styles.modalContenedor}>
@@ -31,6 +53,7 @@ function Modal({ cerrarModal }) {
         >
           <option value="Desayuno">Desayuno</option>
           <option value="Comida">Comida</option>
+          <option value="Cena">Cena</option>
           <option value="Postre">Postre</option>
         </select>
 

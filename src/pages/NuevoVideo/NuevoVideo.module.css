@@ -1,13 +1,24 @@
 .formContainer {
+  width: 30%;
+  height: 40%;
   background-color: var(--beige);
-  padding: var(--large);
+  padding: 2rem;
+  margin: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(13, 13, 13, 0.35);
 }
 
+.modalForm {
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+
 h1 {
   color: var(--negro);
-  font-size: var(--large);
+  font-size: var(--medium);
   margin-bottom: 1rem;
 }
 
@@ -21,13 +32,6 @@ p {
   padding-bottom: 0.5rem;
   text-align: start;
   border-bottom: var(--negro) solid 2px;
-}
-
-.modalForm {
-  display: flex;
-  text-align: start;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 label {
@@ -46,6 +50,21 @@ select {
 }
 
 input[type="text"]:focus,
+select:focus {
+  border-color: var(--verdeObscuro);
+  outline: none;
+}
+
+input[type="url"],
+select {
+  padding: 10px;
+  border: 1px solid var(--gris);
+  border-radius: 8px;
+  font-size: var(--small);
+  background-color: var(--blanco);
+}
+
+input[type="url"]:focus,
 select:focus {
   border-color: var(--verdeObscuro);
   outline: none;

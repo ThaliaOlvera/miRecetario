@@ -12,9 +12,11 @@ function Favoritos() {
         <h1>Mis Favortitos</h1>
       </Titulo>
       <section className={styles.container}>
-        {favorito.map((fav) => {
-          return <Card {...fav} key={fav.id} />;
-        })}
+        {favorito
+          .filter((video) => video && typeof video === "object" && video.id)
+          .map((video) => (
+            <Card key={video.id} video={video} />
+          ))}
       </section>
     </>
   );

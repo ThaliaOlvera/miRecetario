@@ -63,6 +63,7 @@ const NuevoVideo = () => {
 
   return (
     <section className={styles.formContainer}>
+      <h1>Agrega un Nuevo Video</h1>
       <form className={styles.modalForm} onSubmit={handleSubmit}>
         <label htmlFor="titulo">Titulo:</label>
         <input
@@ -85,7 +86,7 @@ const NuevoVideo = () => {
           <option value="Postre">Postre</option>
         </select>
 
-        <label htmlFor="capa">capa (URL):</label>
+        <label htmlFor="capa">Imagen (URL):</label>
         <input
           type="url"
           name="capa"

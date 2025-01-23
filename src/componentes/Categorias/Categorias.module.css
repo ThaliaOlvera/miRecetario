@@ -20,6 +20,6 @@
 .infoCategoriaTitulo {
   text-align: start;
   padding-left: 2rem;
-  font-size: var(--large);
+  font-size: var(--medium);
   letter-spacing: 0.2rem;
 }
