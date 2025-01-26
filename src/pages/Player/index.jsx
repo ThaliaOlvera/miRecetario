@@ -10,7 +10,7 @@ function Player() {
   const parametros = useParams();
   useEffect(() => {
     fetch(
-      `https://my-json-server.typicode.com/ThaliaOlvera/recetarioDb/videos?id=${parametros.id}`
+      `https://678d9465f067bf9e24ea9a5a.mockapi.io/videos?id=${parametros.id}`
     )
       .then((response) => response.json())
       .then((data) => {
