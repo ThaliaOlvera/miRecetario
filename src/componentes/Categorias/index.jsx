@@ -4,7 +4,6 @@ import { useVideoContext } from "../../context/VideosContext";
 
 const CategoryVideos = () => {
   const { videoCategory } = useVideoContext();
-  console.log("Categorías de videos:", videoCategory);
 
   return (
     <section className={styles.container}>

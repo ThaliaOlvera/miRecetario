@@ -1,15 +1,29 @@
 .pie {
-  background-color: var(--negro);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f8f8;
 }
 
-.pie h2 {
-  color: var(--blanco);
-  font-size: 20px;
+.redes {
+  margin-top: 20px;
 }
 
-h2 img {
-  width: 15%;
+.listaRedes {
+  list-style: none;
+  padding: 0;
+}
+
+.listaRedes li {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.listaRedes a {
+  text-decoration: none;
+  color: #0073b1; /* Color de los enlaces */
+  font-weight: bold;
+}
+
+.listaRedes a:hover {
+  text-decoration: underline;
 }
