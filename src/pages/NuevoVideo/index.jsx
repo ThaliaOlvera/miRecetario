@@ -8,7 +8,7 @@ const NuevoVideo = () => {
   const { addVideo } = useVideoContext();
   const [formData, setFormData] = useState({
     titulo: "",
-    categoria: "",
+    categoria: "Desayuno",
     capa: "",
     link: "",
   });

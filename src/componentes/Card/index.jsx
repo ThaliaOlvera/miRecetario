@@ -8,7 +8,7 @@ import Modal from "../Modal";
 import { useVideoContext } from "../../context/VideosContext";
 
 const Card = ({ video }) => {
-  const { deleteVideo } = useVideoContext();
+  const { deleteVideo, videos } = useVideoContext();
   const { favorito, agregarFavorito } = useFavoritosContext();
   const [modalAbierto, setModalAbierto] = useState({ visible: false });
 
@@ -47,9 +47,12 @@ const Card = ({ video }) => {
         <button type="button" onClick={abrirModal}>
           Editar
         </button>
-        <button type="button" onClick={() => deleteVideo(video.id)}>
-          Borrar
-        </button>
+
+        {videos.length > 1 && (
+          <button type="button" onClick={() => deleteVideo(video.id)}>
+            Borrar
+          </button>
+        )}
       </div>
 
       {modalAbierto.visible && (
