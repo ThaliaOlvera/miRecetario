@@ -10,7 +10,7 @@ function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<PaginaBase />}>
+        <Route path="/miRecetario" element={<PaginaBase />}>
           <Route index element={<Inicio />}></Route>
           <Route path="favoritos" element={<Favoritos />}></Route>
           <Route path="nuevoVideo" element={<NuevoVideo />}></Route>

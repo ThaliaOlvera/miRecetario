@@ -1,29 +1,42 @@
 .pie {
+  background-color: var(--beige);
+  color: var(--negro);
   text-align: center;
   padding: 20px;
-  background-color: #f8f8f8;
+  font-size: var(--small);
 }
 
 .redes {
   margin-top: 20px;
 }
 
+.redes h3 {
+  color: var(--verdeObscuro);
+  font-size: var(--medium);
+  margin-bottom: 10px;
+}
+
 .listaRedes {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 .listaRedes li {
   display: inline-block;
-  margin-right: 15px;
 }
 
 .listaRedes a {
   text-decoration: none;
-  color: #0073b1; /* Color de los enlaces */
+  color: var(--verdeObscuro);
   font-weight: bold;
+  font-size: var(--small);
+  transition: color 0.3s ease;
 }
 
 .listaRedes a:hover {
+  color: var(--verde);
   text-decoration: underline;
 }
