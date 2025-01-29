@@ -102,3 +102,20 @@ button {
 .limpiar:hover {
   background-color: var(--blanco);
 }
+
+/*Mobile view*/
+
+@media (max-width: 768px) {
+  .modalForm {
+    padding: 0rem;
+  }
+
+  .modalBotones {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .formContainer H1 {
+    text-align: start;
+  }
+}

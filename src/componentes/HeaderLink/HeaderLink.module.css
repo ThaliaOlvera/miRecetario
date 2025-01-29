@@ -8,5 +8,4 @@
 
 .link:hover {
   color: var(--verde);
-  transform: rotate(90deg);
 }
