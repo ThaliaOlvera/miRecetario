@@ -65,3 +65,42 @@
   transition: 0.3s ease-in-out;
   box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.25);
 }
+
+@media (max-width: 768px) {
+  .container {
+    width: 250px;
+    height: 300px;
+  }
+
+  .capa {
+    width: 80%;
+    height: 60%;
+    padding-top: 2rem;
+  }
+
+  .link {
+    color: var(--negro);
+  }
+
+  .link h2 {
+    padding-top: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+  }
+
+  .favorite {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .containerBtn {
+    gap: 0.5rem;
+  }
+
+  .containerBtn button {
+    width: 30%;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}

@@ -1,4 +1,25 @@
 .container {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+  background-size: contain;
+  background-position: center;
+  transition: background 0.5s ease-in-out;
+}
+
+.container.empty {
+  width: 100%;
+  background-image: url("./AnuncioFavoritos.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: var(--beige);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
 }

@@ -11,7 +11,11 @@ function Favoritos() {
       <Titulo>
         <h1>Mis Favortitos</h1>
       </Titulo>
-      <section className={styles.container}>
+      <section
+        className={`${styles.container} ${
+          favorito.length === 0 ? styles.empty : ""
+        }`}
+      >
         {favorito
           .filter((video) => video && typeof video === "object" && video.id)
           .map((video) => (

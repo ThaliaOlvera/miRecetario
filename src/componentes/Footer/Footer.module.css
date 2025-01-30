@@ -1,4 +1,5 @@
 .pie {
+  height: 15dvh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,21 +7,17 @@
   background-color: var(--beige);
   color: var(--negro);
   text-align: center;
-  padding: 2rem;
 }
 
 .pie h2 {
   font-size: var(--small);
+  font-family: sans-serif;
   padding-right: 2rem;
   border-right: solid 3px var(--negro);
 }
 
-.redes {
-  margin-top: 0.5rem;
-}
-
 .redes p {
-  color: var(--verdeObscuro);
+  color: var(--negro);
   font-size: var(--small);
 }
 
@@ -41,14 +38,14 @@
 
 .listaRedes a {
   text-decoration: none;
-  color: var(--verdeObscuro);
+  color: var(--negro);
   font-size: var(--small);
   transition: color 0.3s ease;
   cursor: pointer;
 }
 
 .listaRedes a:hover {
-  color: var(--verde);
+  color: var(--verdeObscuro);
   text-decoration: underline;
 }
 
@@ -56,5 +53,10 @@
   .listaRedes li {
     display: flex;
     flex-direction: column;
+  }
+
+  .pie {
+    height: 20dvh;
+    padding-bottom: 1rem;
   }
 }
