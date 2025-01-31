@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styles from "./Modal.module.css";
 import { useVideoContext } from "../../context/VideosContext";
+import { FaWindowClose } from "react-icons/fa";
 
 function Modal({ cerrarModal, video }) {
   const { updateVideo } = useVideoContext();
@@ -25,15 +26,28 @@ function Modal({ cerrarModal, video }) {
     }
   };
 
+  const limpiarFormulario = () => {
+    setFormData({
+      titulo: "",
+      categoria: "Desayuno",
+      capa: "",
+      link: "",
+    });
+  };
+
   return (
     <div className={styles.efectoModal}>
       <div className={styles.modalContenedor}>
         <h2 className={styles.modalTitulo}>Editar</h2>
         <button className={styles.cerrarBtn} onClick={cerrarModal}>
-          X
+          <FaWindowClose />
         </button>
       </div>
-      <form className={styles.modalForm} onSubmit={handleSubmit}>
+      <form
+        className={styles.modalForm}
+        onSubmit={handleSubmit}
+        onReset={limpiarFormulario}
+      >
         <label htmlFor="titulo">Titulo:</label>
         <input
           type="text"
