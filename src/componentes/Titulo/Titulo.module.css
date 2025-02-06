@@ -3,5 +3,7 @@
   font-size: var(--large);
   text-align: center;
   font-weight: 500;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
   background-color: var(--beige);
 }

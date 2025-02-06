@@ -1,9 +1,9 @@
 .pie {
-  height: 15dvh;
-  display: flex;
+  width: 100%;
+  height: 20dvh;
+  display: block;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
   background-color: var(--beige);
   color: var(--negro);
   text-align: center;
@@ -12,13 +12,15 @@
 .pie h2 {
   font-size: var(--small);
   font-family: sans-serif;
-  padding-right: 2rem;
-  border-right: solid 3px var(--negro);
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .redes p {
   color: var(--negro);
   font-size: var(--small);
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .listaRedes {
@@ -27,6 +29,7 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
+  margin-top: 0px;
 }
 
 .listaRedes li {
@@ -47,16 +50,4 @@
 .listaRedes a:hover {
   color: var(--verdeObscuro);
   text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-  .listaRedes li {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .pie {
-    height: 20dvh;
-    padding-bottom: 1rem;
-  }
 }

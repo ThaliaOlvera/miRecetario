@@ -6,21 +6,20 @@ import { useEffect, useState } from "react";
 
 function Player() {
   const [video, setVideo] = useState();
-  const parametros = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch(
-      `https://678d9465f067bf9e24ea9a5a.mockapi.io/videos?id=${parametros.id}`
-    )
+    fetch(`https://678d9465f067bf9e24ea9a5a.mockapi.io/videos?id=${id}`)
       .then((response) => response.json())
       .then((data) => {
+        console.log("Respuesta de la API:", data);
         setVideo(data[0]);
       })
       .catch((error) => {
         console.error("Error fetching video:", error);
         setVideo(null);
       });
-  }, [parametros.id]);
+  }, [id]);
 
   if (!video) return <NotFound />;
 

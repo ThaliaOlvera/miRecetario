@@ -1,5 +1,6 @@
 import Titulo from "../../componentes/Titulo";
 import Categorias from "../../componentes/Categorias";
+import "../../pages/inicio/index.module.css";
 
 const Inicio = () => {
   return (

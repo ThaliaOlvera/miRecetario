@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import styles from "./HeaderLink.module.css";
 
-function CabeceraLink({ url, children }) {
+function CabeceraLink({ url, children, onClick }) {
   return (
-    <Link to={url} className={styles.link}>
+    <Link to={url} className={styles.link} onClick={onClick}>
       {children}
     </Link>
   );

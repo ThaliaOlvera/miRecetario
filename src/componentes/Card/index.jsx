@@ -32,7 +32,7 @@ const Card = ({ video }) => {
 
   return (
     <div className={styles.container}>
-      <Link className={styles.link} to={`${video.id}`}>
+      <Link className={styles.link} to={`/miRecetario/${video.id}`}>
         <img src={video.capa} alt={video.titulo} className={styles.capa} />
         <h2>{video.titulo} </h2>
       </Link>
